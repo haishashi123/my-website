@@ -1119,6 +1119,88 @@
         margin-bottom: 1rem;
       }
 
+      .timeline-card .meta {
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 0.35rem;
+        font-size: 0.95rem;
+      }
+
+      .experience-points {
+        list-style: none;
+        display: grid;
+        gap: 0.65rem;
+      }
+
+      .experience-points li {
+        position: relative;
+        padding-left: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .experience-points li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--neon-green);
+      }
+
+      /* Education Section */
+      .education {
+        padding: 8rem 4rem;
+        position: relative;
+      }
+
+      .education-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: 3px;
+        margin-bottom: 4rem;
+        background: linear-gradient(
+          90deg,
+          var(--electric-blue),
+          var(--neon-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .education-grid {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .education-card {
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid var(--electric-blue);
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .education-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 45px rgba(0, 212, 255, 0.35);
+        border-color: var(--neon-green);
+      }
+
+      .education-card h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.7rem;
+        color: var(--neon-green);
+        margin-bottom: 0.5rem;
+      }
+
+      .education-card h4 {
+        color: var(--electric-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      .education-card .date {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
       /* Contact Section */
       .contact {
         padding: 8rem 4rem;
@@ -1659,6 +1741,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-toggle">
@@ -1684,7 +1767,7 @@
             <div class="hero-title">ENTERPRISE .NET | API | CLOUD</div>
             <div class="hero-stats">
               <div class="stat">
-                <span class="stat-number">8+</span>
+                <span class="stat-number">6+</span>
                 <span class="stat-label">Years Experience</span>
               </div>
               <div class="stat">
@@ -1746,7 +1829,7 @@
         <div class="about-content">
           <h2>PROFESSIONAL SUMMARY</h2>
           <p>
-            Senior Full Stack .NET Engineer with 8+ years of experience
+            Senior Full Stack .NET Engineer with 6+ years of experience
             delivering high-performance, scalable enterprise applications in
             legal SaaS environments supporting 500+ law firms.
           </p>
@@ -1780,7 +1863,7 @@
             </div>
             <div class="code-line">
               experience =
-              <span style="color: var(--blood-orange)">8+</span> years;
+              <span style="color: var(--blood-orange)">6+</span> years;
             </div>
             <div class="code-line">
               passion = "<span style="color: var(--electric-blue)"
@@ -1867,49 +1950,91 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-      <h2 class="experience-title">PROFESSIONAL EXPERIENCE</h2>
+      <h2 class="experience-title">EXPERIENCE</h2>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <h3>SENIOR FULL STACK .NET ENGINEER</h3>
-            <h4>ABACUS DATA SYSTEMS INC. (CARET LEGAL)</h4>
-            <div class="date">MAY 2021 - APR 2026</div>
-            <p>
-              Delivered 20+ REST APIs, modernized 8+ legacy .NET modules to
-              .NET 6+, and improved SQL performance by up to 45%. Built
-              event-driven services with Kafka and Elasticsearch, contributed to
-              Angular and React features, and led 30+ production releases with
-              zero critical downtime across Azure and AWS environments.
-            </p>
+            <h3>SOFTWARE ENGINEER II</h3>
+            <h4>CARET — Full-time</h4>
+            <div class="date">APR 2021 - PRESENT</div>
+            <div class="meta">Del Mar, California, United States — Remote</div>
+            <ul class="experience-points">
+              <li>
+                Build and maintain cloud-native services in .NET/C#
+                (ASP.NET Core, Entity Framework) with xUnit tests and CI/CD
+                pipelines.
+              </li>
+              <li>
+                Optimize SQL Server performance through indexing and query
+                tuning to improve response times for high-volume data queries.
+              </li>
+              <li>
+                Design Elasticsearch indexes and queries for responsive search,
+                including data modeling and relevance tuning.
+              </li>
+              <li>
+                Containerize services with Docker and deploy/manage workloads
+                on Kubernetes in partnership with DevOps.
+              </li>
+              <li>
+                Integrate multiple third-party APIs with strong observability,
+                error handling, and technical documentation for cross-team
+                handoffs.
+              </li>
+              <li>
+                Conduct code reviews and system design reviews while
+                collaborating closely with architects and product teams.
+              </li>
+            </ul>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <h3>SOFTWARE ENGINEER</h3>
-            <h4>ZOLA MEDIA, LLC (ZOLASUITE)</h4>
-            <div class="date">MAY 2018 - MAY 2021</div>
-            <p>
-              Built and maintained ASP.NET MVC/.NET Framework applications,
-              Web API and WCF services, and SQL Server data layers for legal
-              SaaS workflows. Delivered full-stack features with C#, ADO.NET,
-              Entity Framework, JavaScript, and KnockoutJS while supporting data
-              migrations and reliable background processing services.
-            </p>
+            <h3>DEVELOPMENT OPERATIONS ENGINEER</h3>
+            <h4>Zola Media LLC</h4>
+            <div class="date">JUN 2018 - AUG 2018</div>
+            <div class="meta">Port Washington, New York, United States — On-site</div>
+            <ul class="experience-points">
+              <li>
+                Developed and maintained ASP.NET MVC and .NET Framework 4.x
+                applications for legal SaaS case management and billing modules.
+              </li>
+              <li>
+                Built and consumed Web API and WCF services, including
+                third-party data provider integrations for client-facing
+                features.
+              </li>
+              <li>
+                Designed and executed SQL Server/T-SQL data migration workflows
+                to onboard records from legacy systems with strong data
+                validation.
+              </li>
+              <li>
+                Built UI components with ASP.NET WebForms, jQuery, and
+                KnockoutJS to deliver data-driven interfaces connected to
+                backend APIs.
+              </li>
+              <li>
+                Designed and optimized SQL Server stored procedures, views, and
+                T-SQL queries to improve performance for complex legal data
+                models.
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <h3>COMPUTER SCIENCE DEGREE</h3>
-            <h4>SUNY OLD WESTBURY</h4>
-            <div class="date">DEC 2020</div>
-            <p>
-              Bachelor of Science in Computer Science - Building the foundation
-              for technological innovation.
-            </p>
-          </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <h2 class="education-title">EDUCATION</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <h3>BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h3>
+          <h4>SUNY OLD WESTBURY</h4>
+          <div class="date">Graduated 2020</div>
         </div>
       </div>
     </section>
